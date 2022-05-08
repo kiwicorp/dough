@@ -1,0 +1,1 @@
+{%- if cookiecutter.type == 'deployment' -%}deployments/{{ cookiecutter.name }}{%- elif cookiecutter.type == 'module' -%}{{ cookiecutter.name }}{%- elif cookiecutter.type == 'submodule' -%}modules/{{ cookiecutter.name }}{%- endif -%}

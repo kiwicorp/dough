@@ -1,0 +1,12 @@
+{
+    "name": "main",
+    "type": [
+        "deployment",
+        "module",
+        "submodule"
+    ],
+    "provider": "aws",
+    "project_slug": "{%- if cookiecutter.type == 'deployment' -%}deployments/{{ cookiecutter.name }}{%- elif cookiecutter.type == 'module' -%}terraform-{{ cookiecutter.provider }}-{{ cookiecutter.name }}{%- elif cookiecutter.type == 'submodule' -%}modules/{{ cookiecutter.name }}{%- endif -%}",
+    "org_name": "acme",
+    "workspace_tag": "acme:aws"
+}
